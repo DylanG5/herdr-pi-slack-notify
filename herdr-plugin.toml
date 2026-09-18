@@ -1,0 +1,20 @@
+id = "dylan.pi-slack-notify"
+name = "Pi Slack Notify"
+version = "0.5.0"
+min_herdr_version = "0.7.0"
+description = "Trigger a Slack workflow when an unseen Pi agent has been done for a configured delay."
+platforms = ["macos"]
+
+[[actions]]
+id = "check"
+title = "Check Pi Slack notification configuration"
+command = ["node", "action.mjs", "check"]
+
+[[actions]]
+id = "test"
+title = "Send a Pi Slack test notification"
+command = ["node", "action.mjs", "test"]
+
+[[events]]
+on = "pane.agent_status_changed"
+command = ["node", "notify.mjs"]
