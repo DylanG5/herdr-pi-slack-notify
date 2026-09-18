@@ -149,7 +149,7 @@ Clone and link the working directory:
 ```sh
 git clone https://github.com/DylanG5/herdr-pi-slack-notify.git
 cd herdr-pi-slack-notify
-herdr plugin link --enabled "$PWD"
+herdr plugin link "$PWD" --enabled
 ```
 
 Run the tests:
